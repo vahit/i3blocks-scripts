@@ -1,0 +1,10 @@
+#!/usr/sbin/bash
+
+if [[ $((BLOCK_BUTTON)) == 1 ]]; then
+    i3lock --image=/home/vahit/pictures/screenshots/screenshot-11-55-47.png --pointer=win; exec mpc pause
+    exit 0
+fi
+echo "Click !!"
+echo "Click !!"
+echo "FFFF00"
+exit 0

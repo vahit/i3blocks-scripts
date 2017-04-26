@@ -7,9 +7,9 @@ batt_status="$(echo $info | awk '{print $3}')"
 if [ "$batt_status" == "Discharging," ]; then
     batt_level="$(echo $info | awk '{print $4}' | rev | cut -c3- | rev)"
     batt_remain="$(echo $info | awk '{print $5}' | rev | cut -d ":" -f2- | rev)"
-    if [ $batt_level -le 20 ]; then
+    if [ $batt_level -le 35 ]; then
 	color="#FF0000"
-	notify-send --urgency=critical --expire-time=5000 "Battery level lower that 20%, Recharg it."
+	notify-send --urgency=critical --expire-time=5000 "Battery level lower that 35%, Recharg it."
     elif [ $batt_level -le 40 ]; then
 	color="#FFAE00"
 	# notify-send --urgency=normal --expire-time=5000 "Battery level lower that 40%, Recharg it."

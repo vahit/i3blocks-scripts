@@ -22,19 +22,23 @@
 # echo $KBD
 
 # layout="$(/home/vahit/bin/xkblayout-state print %s)"
-layout="$(xkblayout-state print %s)"
-if [ "$layout" == 'us' ]; then
-    layout="En"
-    # color="AAF111"
-    echo $layout
-    echo $layout
-elif [ "$layout" == 'ir' ]; then
-    layout="Fa"
-    color="FFFF00"
-    echo $layout
-    echo $layout
-    echo $color
-fi
+# layout="$(xkblayout-state print %s)"
+# if [ "$layout" == 'us' ]; then
+#     layout="En"
+#     # color="AAF111"
+#     echo $layout
+#     echo $layout
+# elif [ "$layout" == 'ir' ]; then
+#     layout="Fa"
+#     color="FFFF00"
+#     echo $layout
+#     echo $layout
+#     echo $color
+# fi
+
+echo Bri: $(xbacklight -get | cut -f1 -d.)
+echo Bri: $(xbacklight -get | cut -f1 -d.)
+echo "FFFF00"
 
 
 # echo $layout

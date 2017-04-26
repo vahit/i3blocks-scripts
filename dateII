@@ -1,0 +1,14 @@
+#!/usr/sbin/bash
+
+dateh="$(/usr/libexec/i3blocks/hijri-date.py h)"
+dateg="$(/usr/libexec/i3blocks/hijri-date.py g)"
+
+if [ $((BLOCK_BUTTON)) == 1 ]; then
+   echo "$dateg"
+   echo "$dateg"
+   echo "#FFFF00"
+fi
+echo "$dateh"
+echo "$dateh"
+echo "#FFFF00"
+exit 0	
